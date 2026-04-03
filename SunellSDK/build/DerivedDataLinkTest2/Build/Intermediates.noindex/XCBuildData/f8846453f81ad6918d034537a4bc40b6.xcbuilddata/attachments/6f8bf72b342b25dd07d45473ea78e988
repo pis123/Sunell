@@ -1,0 +1,6 @@
+framework module SunellSDK {
+  umbrella header "SunellSDK.h"
+  export *
+
+  module * { export * }
+}

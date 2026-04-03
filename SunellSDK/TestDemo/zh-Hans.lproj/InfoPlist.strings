@@ -1,0 +1,3 @@
+/* InfoPlist.strings (简体中文) */
+CFBundleDisplayName = "景阳SDK示例";
+NSCameraUsageDescription = "需要访问相机进行扫描设备二维码来读取设备信息。";

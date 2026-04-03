@@ -1,0 +1,3 @@
+/* InfoPlist.strings (English) */
+CFBundleDisplayName = "Sunell SDK Demo";
+NSCameraUsageDescription = "Camera access is required to scan device QR codes and read device information.";

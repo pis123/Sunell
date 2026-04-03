@@ -1,0 +1,19 @@
+{
+  "" : {
+    "diagnostics" : "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/build/DerivedDataLinkTest/Build/Intermediates.noindex/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-primary.dia",
+    "emit-module-dependencies" : "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/build/DerivedDataLinkTest/Build/Intermediates.noindex/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/build/DerivedDataLinkTest/Build/Intermediates.noindex/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-primary-emit-module.dia",
+    "pch" : "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/build/DerivedDataLinkTest/Build/Intermediates.noindex/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/build/DerivedDataLinkTest/Build/Intermediates.noindex/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-primary.swiftdeps"
+  },
+  "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/SunellSDK/SunellSDK.swift" : {
+    "const-values" : "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/build/DerivedDataLinkTest/Build/Intermediates.noindex/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-b5c22fa7d3b7b8f0e52de0bfbdec3a68.swiftconstvalues",
+    "dependencies" : "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/build/DerivedDataLinkTest/Build/Intermediates.noindex/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-b5c22fa7d3b7b8f0e52de0bfbdec3a68.d",
+    "diagnostics" : "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/build/DerivedDataLinkTest/Build/Intermediates.noindex/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-b5c22fa7d3b7b8f0e52de0bfbdec3a68.dia",
+    "index-unit-output-path" : "/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-b5c22fa7d3b7b8f0e52de0bfbdec3a68.o",
+    "llvm-bc" : "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/build/DerivedDataLinkTest/Build/Intermediates.noindex/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-b5c22fa7d3b7b8f0e52de0bfbdec3a68.bc",
+    "object" : "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/build/DerivedDataLinkTest/Build/Intermediates.noindex/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-b5c22fa7d3b7b8f0e52de0bfbdec3a68.o",
+    "swift-dependencies" : "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/build/DerivedDataLinkTest/Build/Intermediates.noindex/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-b5c22fa7d3b7b8f0e52de0bfbdec3a68.swiftdeps",
+    "swiftmodule" : "/Users/sunell/Desktop/jfProjects/AU03/SDK0323/SunellSDK/build/DerivedDataLinkTest/Build/Intermediates.noindex/SunellSDK.build/Debug-iphoneos/SunellSDK.build/Objects-normal/arm64/SunellSDK-b5c22fa7d3b7b8f0e52de0bfbdec3a68~partial.swiftmodule"
+  }
+}

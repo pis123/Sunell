@@ -1,0 +1,34 @@
+/* Localizable.strings (简体中文) — 内容待补充 */
+
+// Navigation
+"TK_AppTitle" = "景阳SDK示例";
+
+// Buttons
+"TK_AddDevice" = "添加设备";
+"TK_LocalDevice" = "本地设备";
+"TK_P2PDevice" = "P2P设备";
+"TK_P2PConnectFailed" = "连接失败";
+"TK_ChannelCountFormat" = "%d 路通道";
+"TK_Cancel" = "取消";
+"TK_Delete" = "删除";
+"TK_DeviceUntitled" = "未命名设备";
+"TK_DeviceOnline" = "在线";
+"TK_DeviceOffline" = "离线";
+"TK_Live" = "直播";
+"TK_Playback" = "回放";
+"TK_Save" = "保存";
+"TK_QRCode" = "二维码";
+"TK_ScanQRCodeHint" = "请将二维码对准扫描区域";
+"TK_CameraPermissionDenied" = "相机权限未开启";
+"TK_CameraNotAvailable" = "相机不可用";
+
+// Local Device Page
+"TK_Address" = "地址";
+"TK_Port" = "端口";
+"TK_Username" = "用户名";
+"TK_Password" = "密码";
+"TK_AddressPlaceholder" = "请输入地址";
+"TK_PortPlaceholder" = "请输入端口";
+"TK_UsernamePlaceholder" = "请输入用户名";
+"TK_PasswordPlaceholder" = "请输入密码";
+"TK_QRCodePlaceholder" = "请输入二维码内容";

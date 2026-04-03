@@ -1,0 +1,33 @@
+/* Localizable.strings (English) — 内容待补充 */
+// Navigation
+"TK_AppTitle" = "Sunell SDK Demo";
+
+// Buttons
+"TK_AddDevice" = "Add Device";
+"TK_LocalDevice" = "Local Device";
+"TK_P2PDevice" = "P2P Device";
+"TK_P2PConnectFailed" = "Connection failed";
+"TK_ChannelCountFormat" = "%d channels";
+"TK_Cancel" = "Cancel";
+"TK_Delete" = "Delete";
+"TK_DeviceUntitled" = "Unnamed device";
+"TK_DeviceOnline" = "Online";
+"TK_DeviceOffline" = "Offline";
+"TK_Live" = "Live";
+"TK_Playback" = "Playback";
+"TK_Save" = "Save";
+"TK_QRCode" = "QR Code";
+"TK_ScanQRCodeHint" = "Align QR code within frame";
+"TK_CameraPermissionDenied" = "Camera permission denied";
+"TK_CameraNotAvailable" = "Camera not available";
+
+// Local Device Page
+"TK_Address" = "Address";
+"TK_Port" = "Port";
+"TK_Username" = "Username";
+"TK_Password" = "Password";
+"TK_AddressPlaceholder" = "Enter address";
+"TK_PortPlaceholder" = "Enter port";
+"TK_UsernamePlaceholder" = "Enter username";
+"TK_PasswordPlaceholder" = "Enter password";
+"TK_QRCodePlaceholder" = "Enter QR code content";

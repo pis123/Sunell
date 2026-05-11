@@ -33,11 +33,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        NotificationCenter.default.post(name: .sunellSceneDidBecomeActiveResumeVideo, object: nil)
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
         // Called when the scene will move from an active state to an inactive state.
         // This may occur due to temporary interruptions (ex. an incoming phone call).
+        // 进入 inactive/即将后台时先停 GPU 预览，避免 kIOGPUCommandBufferCallbackErrorBackgroundExecutionNotPermitted
+        NotificationCenter.default.post(name: .sunellSceneWillResignActivePauseVideo, object: nil)
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
@@ -55,6 +58,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 extension SceneDelegate: SunellSDKEntry.Delegate {
+    func sunellSDKChannelStatusChange(_ channelModel: SunellChannelModel) {
+        print("device Id:\(channelModel.deviceId),channelId:\(channelModel.channelId),channelName:\(channelModel.channleName),status:\(channelModel.status)")
+    }
+    
     func sunellSDKDeviceErrorStatus(_ deviceModel: SunellDeviceModel, _ type: Int32) {
         print(deviceModel.deviceId,type)
         print("SceneDelegate sunellSDKDeviceErrorStatus:",type)
@@ -101,7 +108,13 @@ extension SceneDelegate: SunellSDKEntry.Delegate {
     }
     
     func sunellSDKVideoOperation(_ deviceId: String, channelId: Int, eventId: Int, msg: String, playModel: Int) {
-        // Not implemented.
+        var dict = [String: Any]()
+        dict["deviceId"] = deviceId;
+        dict["channelId"] = channelId;
+        dict["eventId"] = eventId;
+        dict["playModel"] = playModel;
+        dict["msg"] = msg;
+        NotificationCenter.default.post(name: Notification.Name("sunellSDKVideoOperation"), object: dict)
     }
     
   
@@ -113,4 +126,8 @@ extension SceneDelegate: SunellSDKEntry.Delegate {
 extension Notification.Name {
     /// Auto-reconnect phase updates: `userInfo` may include `phase` (`start` / `end`), `deviceId`, `status`, and on `end` optionally `success`.
     static let sunellDeviceAutoReconnectStatusDidChange = Notification.Name("sunellDeviceAutoReconnectStatusDidChange")
+    /// Scene 将离开前台（来电遮罩、切后台前兆）：应停止预览/GPU。
+    static let sunellSceneWillResignActivePauseVideo = Notification.Name("sunellSceneWillResignActivePauseVideo")
+    /// Scene 已回到 active：可恢复预览。
+    static let sunellSceneDidBecomeActiveResumeVideo = Notification.Name("sunellSceneDidBecomeActiveResumeVideo")
 }

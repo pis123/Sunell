@@ -225,12 +225,24 @@ final class DeviceManager: NSObject {
 
     // MARK: - Model <-> DTO
 
+    private static func sunellDeviceStatus(fromPersisted raw: Int) -> SunellDeviceStatus {
+        if raw == 1 {
+            return SunellDeviceStatus_online
+        }
+        switch raw {
+        case SunellDeviceStatus_unknown.rawValue: return SunellDeviceStatus_unknown
+        case SunellDeviceStatus_online.rawValue: return SunellDeviceStatus_online
+        case SunellDeviceStatus_offline.rawValue: return SunellDeviceStatus_offline
+        default: return SunellDeviceStatus_unknown
+        }
+    }
+
     private static func dto(from model: SunellDeviceModel) -> DeviceCacheDTO {
         let chs: [ChannelCacheDTO] = channelModels(from: model.channels as Any?).map { ch in
             ChannelCacheDTO(
                 channelId: Int(ch.channelId),
                 deviceId: ch.deviceId,
-                status: Int(ch.status),
+                status: ch.status.rawValue,
                 channleName: ch.channleName
             )
         }
@@ -250,7 +262,7 @@ final class DeviceManager: NSObject {
             devType: Int(model.devType),
             port: Int(model.port),
             chnNum: Int(model.chnNum),
-            status: Int(model.status),
+            status: model.status.rawValue,
             isP2PAdd: model.isP2PAdd,
             channels: chs
         )
@@ -289,13 +301,13 @@ final class DeviceManager: NSObject {
         m.port = Int32(dto.port)
         m.chnNum = Int32(dto.chnNum)
         // Restored devices start offline; SDK callbacks refresh real status.
-        m.status = 0
+        m.status = SunellDeviceStatus_unknown
         m.isP2PAdd = dto.isP2PAdd ?? false
         let channels: [SunellChannelModel] = dto.channels.map { c in
             let ch = SunellChannelModel()
             ch.channelId = Int32(c.channelId)
             ch.deviceId = c.deviceId
-            ch.status = Int32(c.status)
+            ch.status = Self.sunellDeviceStatus(fromPersisted: c.status)
             ch.channleName = c.channleName
             return ch
         }

@@ -10,5 +10,4 @@
 
 #import <SunellSDK/SunellSDKManager.h>
 #import <SunellSDK/SunellDeviceModel.h>
-#import <SunellSDK/SunellChannelModel.h>
 #endif /* SunellSDK_h */

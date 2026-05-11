@@ -23,4 +23,9 @@
     NSString *keyValue = [NSString stringWithFormat:@"%@%d",deviceId,channelId];
     return  [self.playerHandleDictionary[keyValue] intValue];
 }
+
+- (void)removePlayerHandleForDeviceId:(NSString *)deviceId channelId:(int)channelId {
+    NSString *keyValue = [NSString stringWithFormat:@"%@%d", deviceId, channelId];
+    [self.playerHandleDictionary removeObjectForKey:keyValue];
+}
 @end

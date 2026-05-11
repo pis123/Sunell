@@ -177,7 +177,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.configure(
             name: Self.displayName(for: device),
             channelCount: Self.channelCount(for: device),
-            isOnline: device.status == 1
+            isOnline: device.status.rawValue == 1
         )
         return cell
     }
